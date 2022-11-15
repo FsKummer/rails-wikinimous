@@ -3,6 +3,9 @@
   <head>
     <title>RailsWikinimous</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +14,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg bg-light d-flex justify-content-between px-3">
+      <a class="navbar-brand" href="/articles">Wikinomous</a>
+      <a class="nav-link active" aria-current="page" href="/articles/new">Create a new article</a>
+    </nav>
+
+    <div class="container d-flex flex-column align-items-left p-5">
+      <%= yield %>
+    </div>
   </body>
 </html>
